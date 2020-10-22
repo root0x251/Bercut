@@ -1,4 +1,5 @@
 import model.PersonalData;
+import model.ResultModel;
 
 public class Main {
 
@@ -75,7 +76,8 @@ public class Main {
 
         }
 
-        System.out.println("Result {\n isValid : " + isValid + "\n errCnt : " + (totalErrorCount) + "\n}");
+        ResultModel resultModel = new ResultModel(totalErrorCount, isValid);
+        System.out.println(resultModel.toString());
 
         differenceFieldsLengthError = 0;
         resultCharError = 0;
@@ -119,6 +121,8 @@ public class Main {
         }
         return counter;
     }
+
+
 }
 
 //МАРИЯ
